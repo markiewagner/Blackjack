@@ -1,16 +1,3 @@
-/*******************************************************************************
- * CS 103 Twenty-One (Blackjack) PA
- * Name: Markie Wagner
- * USC email: markiero@usc.edu
- * Comments (you want us to know):
- *
- *
- ******************************************************************************/
-
-// Add other #includes if you need
-
-
-
 #include <iostream>
 #include <cstdlib>
 
@@ -236,30 +223,19 @@ int main(int argc, char* argv[])
     cout << "Dealer: ? ";
     printCard(dhand[1]);
     cout << endl;
-
-    
        //say what cards player has
         cout << "Player: ";
         for(int b = 0; b < plen+1; b++)
         {
           printCard(phand[b]);
         }
-
-
-
       while(playerbust == false && staying == false && getBestScore(phand, plen) != 21)
       {
-
        
-
         //instruct
         cout << endl;
-
         cout << "Type 'h' to hit and 's' to stay:" << endl;
-
         cin >> res;
-
-
 
         //respond to instruction
         if(res == 's')
@@ -303,24 +279,10 @@ int main(int argc, char* argv[])
 
           playerbust = true;
           cout << "Tie " << getBestScore(phand, plen) << " " << getBestScore(dhand, dlen) << endl;
-        }
-
-
-      
-      
-
-      
+         }
 
     }
-
-
-
     
-
-     
-
-    
-
     //dealer now 
 
     if(playerbust != true)
@@ -344,11 +306,7 @@ int main(int argc, char* argv[])
           dlen = dlen+1;
           deck += 1;
           dhand[dlen] = cards[deck];
-
-         
-
         }
-
       }
 
       if(getBestScore(dhand, dlen) > 21)
@@ -387,27 +345,11 @@ int main(int argc, char* argv[])
 
         }
 
-
-
-
     }
-
     cout << endl;
     cout << "Play again? [y/n]" << endl;
     cin >> stillplaying;
-
-
   }
-
-
-
-
-
-
-
-
-
-
   return 0;
 }
 
